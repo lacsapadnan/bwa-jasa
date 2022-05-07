@@ -20,6 +20,7 @@ class Service extends Model
 
     protected $fillable = [
         'users_id',
+        'subcategory_id',
         'title',
         'description',
         'delivery_time',
@@ -35,6 +36,12 @@ class Service extends Model
     public function user()
     {
         return $this->belongsTo('App\Models\User', 'users_id', 'id');
+    }
+
+    // Subcategory Relationship
+    public function subcategory()
+    {
+        return $this->belongsTo('App\Models\Subcategory', 'subcategory_id', 'id');
     }
 
     // Advantage User Relationship
