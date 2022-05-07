@@ -19,7 +19,7 @@ class DetailUserSeeder extends Seeder
             [
                 'users_id' => 1,
                 'photo' => '',
-                'job' => 'Entrepreneur',
+                'job' => 'Admin',
                 'contact_number' => '',
                 'biography' => '',
                 'created_at' => date('Y-m-d H:i:s'),
@@ -27,6 +27,15 @@ class DetailUserSeeder extends Seeder
             ],
             [
                 'users_id' => 2,
+                'photo' => '',
+                'job' => 'Entrepreneur',
+                'contact_number' => '',
+                'biography' => '',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
+            ],
+            [
+                'users_id' => 3,
                 'photo' => '',
                 'job' => 'UI/UX Designer',
                 'contact_number' => '',
