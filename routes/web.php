@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 // Landing page
@@ -52,5 +53,9 @@ Route::group(['prefix' => 'member', 'as' => 'member.', 'middleware' => ['auth:sa
     // Profile
     Route::get('delete_photo', [ProfileController::class, 'delete'])->name('delete.photo.profile');
     Route::resource('profile', ProfileController::class);
+});
+
+Route::group(['middleware' => 'admin' ['auth:sanctum']], function () {
+    Route::get('admin', [AdminController::class, 'index'])->name('admin.index');
 });
 

@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
                 'email' => 'admin@mail.com',
                 'password' => Hash::make('admin123'),
                 'remember_token' => NULL,
-                'isAdmin' => true,
+                'isAdmin' => 1,
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
